@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Lounger>
+	 <WebPath>.do,.action,.ne</WebPath>
+	<RootPath>testone</RootPath>
+	<VideoPath>/cc</VideoPath>
+	<DatabaseTemplate  sqlprint="true" >
+		<Database> 
+		  	<Name>sqlserver</Name>  
+		    <DriverClass>com.microsoft.sqlserver.jdbc.SQLServerDriver</DriverClass>  
+		    <Url>jdbc:sqlserver://127.0.0.1:1433; DatabaseName=one</Url>  
+		    <User>sa</User>  
+		    <Password>root</Password> 
+		</Database>
+		<Database> 
+		  	<Name>orcl</Name>  
+		    <DriverClass>oracle.jdbc.driver.OracleDriver</DriverClass>  
+		    <Url>jdbc:oracle:thin:@127.0.0.1:1521:orcl</Url>  
+		    <User>scott</User>  
+		    <Password>orcl</Password> 
+		</Database>
+		<Database> 
+		  	<Name>mysql</Name>  
+		    <DriverClass>com.mysql.jdbc.Driver</DriverClass>  
+		    <Url>jdbc:mysql://127.0.0.1:3306/one?characterEncoding=utf-8</Url>  
+		    <User>root</User>  
+		    <Password>root</Password>
+		    
+		    <defaultAutoCommit>true</defaultAutoCommit>
+		    <defaultReadOnly>false</defaultReadOnly>
+		    <defaultTransactionIsolation>1</defaultTransactionIsolation>
+		    <defaultCatalog></defaultCatalog>
+		    <initialSize>0</initialSize>
+		    <maxActive>8</maxActive>
+		    <maxIdle>8</maxIdle>
+		    <minIdle>0</minIdle>
+		    <maxWait>5000</maxWait>
+			<validationQuery>select 1</validationQuery>
+			<testOnBorrow>true</testOnBorrow>
+			<testOnReturn>false</testOnReturn>
+			<testWhileIdle>false</testWhileIdle>
+			<timeBetweenEvictionRunsMillis>-1</timeBetweenEvictionRunsMillis>
+			<numTestsPerEvictionRun>3</numTestsPerEvictionRun>
+			<minEvictableIdleTimeMillis>1800000</minEvictableIdleTimeMillis>
+			<poolPreparedStatements>false</poolPreparedStatements>
+			<maxOpenPreparedStatements>0</maxOpenPreparedStatements>
+			<accessToUnderlyingConnectionAllowed>false</accessToUnderlyingConnectionAllowed>
+			<removeAbandoned>false</removeAbandoned>
+			<removeAbandonedTimeout>300</removeAbandonedTimeout>
+		    <logAbandoned>false</logAbandoned>
+		    
+		</Database>
+	</DatabaseTemplate> 
+	<FileItemFactory>
+		<Repository></Repository>
+		<SizeThreshold>102644</SizeThreshold>
+		<SizeMax>1024876544</SizeMax>
+	</FileItemFactory>
+	<Interceptors>
+		<Interceptor>
+			<Name>lan</Name>
+			<Class>testone.lan</Class>
+		</Interceptor>
+	</Interceptors>
+</Lounger>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Lounger">
+        <wb-resource deploy-path="/" source-path="/WebRoot" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/web"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/util"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/annotation"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/core"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/db"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
+        <property name="context-root" value="Lounger"/>
+        <property name="java-output-path" value="/Lounger/build/classes"/>
+    </wb-module>
+</project-modules>
