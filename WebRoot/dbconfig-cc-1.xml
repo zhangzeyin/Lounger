@@ -4,20 +4,20 @@
 	<RootPath>testone</RootPath>
 	<VideoPath>/cc</VideoPath>
 	<DatabaseTemplate  sqlprint="true" >
-		<Database> 
+		<!-- <Database> 
 		  	<Name>sqlserver</Name>  
 		    <DriverClass>com.microsoft.sqlserver.jdbc.SQLServerDriver</DriverClass>  
 		    <Url>jdbc:sqlserver://127.0.0.1:1433; DatabaseName=one</Url>  
 		    <User>sa</User>  
 		    <Password>root</Password> 
-		</Database>
-		<Database> 
+		</Database> -->
+		<!-- <Database> 
 		  	<Name>orcl</Name>  
 		    <DriverClass>oracle.jdbc.driver.OracleDriver</DriverClass>  
 		    <Url>jdbc:oracle:thin:@127.0.0.1:1521:orcl</Url>  
 		    <User>scott</User>  
 		    <Password>orcl</Password> 
-		</Database>
+		</Database> -->
 		<Database> 
 		  	<Name>mysql</Name>  
 		    <DriverClass>com.mysql.jdbc.Driver</DriverClass>  
@@ -48,7 +48,7 @@
 			<removeAbandonedTimeout>300</removeAbandonedTimeout>
 		    <logAbandoned>false</logAbandoned>
 		    
-		</Database>
+		</Database> 
 	</DatabaseTemplate> 
 	<FileItemFactory>
 		<Repository></Repository>

@@ -42,28 +42,36 @@ public class Verification {
 			if(Dbname!=null){
 			 Dbnames = Dbname.split(",");
 			}
-			Set<String> dbs=Parameter.DataTableMap.keySet();
-			
-			if(!UtilCore.isDatabase(Dbnames)){
-				try {
-					new LoungerDBException()
-							.LoungerDBException("名为"+Tbname+"的表数据库连接设置异常");
-				} catch (LoungerDBException e) {
-					log.error(e.getMessage(), e);
-					System.exit(0);
-				}
-			}
+			Object[] dbs= Parameter.DataTableMap.keySet().toArray();
+			int dbsize = Parameter.Database.keySet().size();
 
-			for (String db : dbs) {
-				for (String dbn : Dbnames) {
-					if(dbn.equals(db)){
-						VerificationTab(Tbname, db);
+			if (dbsize > 1) {
+				if(!UtilCore.isDatabase(Dbnames)){
+					try {
+						new LoungerDBException()
+								.LoungerDBException("名为"+Tbname+"的表数据库连接设置异常");
+					} catch (LoungerDBException e) {
+						log.error(e.getMessage(), e);
+						System.exit(0);
 					}
 				}
-				if(Dbname==null){
-					VerificationTab(Tbname, db);
+				
+				for (Object db : dbs) {
+					for (String dbn : Dbnames) {
+						if(dbn.equals(db)){
+							VerificationTab(Tbname, db.toString());
+						}
+					}
+					if(Dbname==null){
+						VerificationTab(Tbname, db.toString());
+					}
 				}
+			}else if(dbsize==1){
+				VerificationTab(Tbname, dbs[0].toString());
 			}
+			
+
+			
 		}
 		
 	}
