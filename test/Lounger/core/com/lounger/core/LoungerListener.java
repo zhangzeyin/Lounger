@@ -22,11 +22,9 @@ import org.quartz.SchedulerFactory;
 import org.quartz.TriggerBuilder;
 import org.quartz.impl.StdSchedulerFactory;
 
-import testone.SayHello;
 
 import com.lounger.web.GetClass;
 import com.lounger.web.LoungerException;
-import com.lounger.web.LoungerWebException;
 
 /**
  * <pre>
@@ -81,7 +79,7 @@ public class LoungerListener extends HttpServlet implements
 					.getInitParameter("loungerconfig");
 
 			if (loungerconfi != null && loungerconfi.trim() != "") {
-				RedConfig redConfig=new RedConfig();
+				ReadConfig redConfig=new ReadConfig();
 				redConfig.Redconfig(loungerconfi);
 			}
 			RedWebPath();

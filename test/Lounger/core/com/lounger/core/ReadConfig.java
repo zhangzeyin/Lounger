@@ -24,8 +24,8 @@ import com.lounger.web.LoungerInterceptors;
  * 类描述： 读取配置文件    
  * @version </pre>
  */
-public class RedConfig {
-	private static Logger log = Logger.getLogger(RedConfig.class);
+public class ReadConfig {
+	private static Logger log = Logger.getLogger(ReadConfig.class);
 	/**
 	 * <pre>
 	 * RedConfig(读取需要处理的xml)   
