@@ -1,30 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Lounger>
+	<!-- 配置请求后缀 -->
 	 <WebPath>.do,.action,.ne</WebPath>
+	<!--  配置扫描根包 -->
 	<RootPath>testone</RootPath>
+	<!-- 配置页面前缀 -->
 	<VideoPath>/cc</VideoPath>
+	<!-- 配置数据源流 集合   sqlprint是否输出sql语句  -->
 	<DatabaseTemplate  sqlprint="true" >
-		<!-- <Database> 
+		<!-- 配置数据源 -->
+		<Database> 
+			<!--  数据源名称 -->
 		  	<Name>sqlserver</Name>  
+		  	<!-- 数据库驱动 -->
 		    <DriverClass>com.microsoft.sqlserver.jdbc.SQLServerDriver</DriverClass>  
+		    <!-- 数据库连接地址 -->
 		    <Url>jdbc:sqlserver://127.0.0.1:1433; DatabaseName=one</Url>  
-		    <User>sa</User>  
+		   <!--  数据库账号 -->
+		    <User>sa</User> 
+		<!-- 数据库密码  -->
 		    <Password>root</Password> 
-		</Database> -->
-		<!-- <Database> 
+		</Database>
+		<Database> 
 		  	<Name>orcl</Name>  
 		    <DriverClass>oracle.jdbc.driver.OracleDriver</DriverClass>  
 		    <Url>jdbc:oracle:thin:@127.0.0.1:1521:orcl</Url>  
 		    <User>scott</User>  
 		    <Password>orcl</Password> 
-		</Database> -->
+		</Database>
 		<Database> 
 		  	<Name>mysql</Name>  
 		    <DriverClass>com.mysql.jdbc.Driver</DriverClass>  
 		    <Url>jdbc:mysql://127.0.0.1:3306/one?characterEncoding=utf-8</Url>  
 		    <User>root</User>  
 		    <Password>root</Password>
-		    
+		   	 以下参照dbcp连接池配置
 		    <defaultAutoCommit>true</defaultAutoCommit>
 		    <defaultReadOnly>false</defaultReadOnly>
 		    <defaultTransactionIsolation>1</defaultTransactionIsolation>
@@ -48,16 +58,21 @@
 			<removeAbandonedTimeout>300</removeAbandonedTimeout>
 		    <logAbandoned>false</logAbandoned>
 		    
-		</Database> 
+		</Database>
 	</DatabaseTemplate> 
+	<!-- 配置文件上传 -->
 	<FileItemFactory>
 		<Repository></Repository>
 		<SizeThreshold>102644</SizeThreshold>
 		<SizeMax>1024876544</SizeMax>
 	</FileItemFactory>
+	<!-- 设置拦截器集合 -->
 	<Interceptors>
+	<!-- 拦截器 -->
 		<Interceptor>
+		<!-- 拦截器名称 -->
 			<Name>lan</Name>
+			<!-- 拦截器路径 -->
 			<Class>testone.lan</Class>
 		</Interceptor>
 	</Interceptors>
