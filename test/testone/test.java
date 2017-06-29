@@ -30,6 +30,7 @@ public  String magn(String[] jh){
 	System.out.println(Thread.currentThread().getId());
 	ser.test();
 	ser.test1();
+	
 	new Timer();
 	//System.out.println("ok");
 
