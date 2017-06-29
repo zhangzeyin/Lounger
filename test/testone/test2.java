@@ -57,7 +57,7 @@ public class test2 {
 		PreparedStatement st = null; 
 		if(sqlA.contains("select")){
 			int selectnum=(","+sqlA+",").split("select").length-1;
-			if(selectnum==1){
+			if(selectnum==12){
 				String tabname = sql.substring(sqlA.indexOf("from")+4,sql.length()).trim();
 				
 				if(sqlA.indexOf("where")>-1){
@@ -75,7 +75,6 @@ public class test2 {
 					 //string=string.replaceAll("( )((N|n)(A|a)(T|t)(U|u)(R|r)(A|a)(L|l)|(O|o)(U|u)(T|t)(E|e)(R|r)|(C|c)(R|r)(O|o)(S|s)(S|s)|(L|l)(E|e)(F|f)(T|t)|(R|r)(E|e)(I|i)(G|g)(H|h)(T|t)|(I|i)(N|n)(N|n)(E|e)(R|r)|(F|f)(U|u)(L|l)(L|l)|(S|s)(E|e)(L|l)(F|f))( )", " ");
 					string=string.replaceAll(" (L|l)(E|e)(F|f)(T|t) ", " ");
 					string=string.replaceAll(" (I|i)(N|n)(N|n)(E|e)(R|r) ", " ");
-					string=string.replaceAll(" (F|f)(U|u)(L|l)(L|l) ", " ");
 					string=string.replaceAll(" (R|r)(E|e)(I|i)(G|g)(H|h)(T|t) ", " ");
 					string=string.replaceAll(" (C|c)(R|r)(O|o)(S|s)(S|s) ", " ");
 					string=string.replaceAll(" (O|o)(U|u)(T|t)(E|e)(R|r) ", " ");
