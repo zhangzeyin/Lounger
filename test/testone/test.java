@@ -33,7 +33,7 @@ public  String magn(String[] jh){
 	
 	new Timer();
 	
-	//System.out.println("ok");
+	//System.out.println(");
 
 	return "问问nihao";
 
