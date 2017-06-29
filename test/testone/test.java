@@ -32,8 +32,9 @@ public  String magn(String[] jh){
 	ser.test1();
 	new Timer();
 	//System.out.println("ok");
-	System.out.println("ceshi");
-	return "问问你的啦啦啦啦啦";
+
+	return "问问nihao";
+
 			
 }
 
